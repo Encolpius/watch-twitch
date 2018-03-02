@@ -1,3 +1,10 @@
+/*
+Imported Fonts
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Marcellus+SC');
+
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -70,11 +77,12 @@ Section And Grid
 
 section {
   margin: 0 auto;
-  margin-top: 6em;
-  width: 30%;
-  min-width: 450px;
+  margin-top: 3em;
+  width: 35%;
+  min-width: 465px;
+  max-width: 520px;
   display: grid;
-  grid-template-rows: 160px repeat(6, 160px);
+  grid-template-rows: 160px repeat(6, 180px);
   grid-gap: 6px;
 }
 
@@ -87,6 +95,34 @@ section > div {
 
 section > div:first-child {
   text-align: center;
+}
+
+ul {
+  margin: 0 auto;
+  margin-top: 3em;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+li {
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Marcellus SC', serif;
+  letter-spacing: 1.3px;
+  border-radius: 5px;
+  min-width: 119px;
+}
+
+a {
+  cursor: pointer;
+  color: blue;
+}
+
+a:active {
+  color: #6441a4;
 }
 
 /*
@@ -125,6 +161,13 @@ Cell Templates
   display: none;
 }
 
+.container img {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: center;
+  opacity: 0.8;
+}
+
 /*---------------------------------*/
 
 .content {
@@ -143,6 +186,35 @@ Cell Templates
   height: 110px;
   border-radius: 50%;
   border: 1px solid black;
+}
+
+/*
+======================
+Information
+======================
+*/
+
+h1 {
+  padding-top: .5em;
+  padding-left: 20px;
+  font-family: 'Marcellus SC', serif;
+  font-size: 24px;
+  color: green;
+  font-weight: 700;
+}
+
+h2 {
+  padding-top: 5px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+h3 {
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 15px;
+  font-size: 15px;
+  font-style: italic;
 }
 
 /*
