@@ -108,6 +108,45 @@ Header and Image
 
 /*
 ======================
+Cell Templates
+======================
+*/
+
+.container {
+  display: grid;
+  grid-template-rows: auto 0px 30px;
+}
+
+.container > div:last-child {
+  border-top: 1px solid #ccc;
+}
+
+.twitch-json-image {
+  display: none;
+}
+
+/*---------------------------------*/
+
+.content {
+  display: grid;
+  grid-template-columns: 160px auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo div {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+/*
+======================
 Footer
 ======================
 */
