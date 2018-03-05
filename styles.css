@@ -69,6 +69,8 @@ html {
   background: linear-gradient(to bottom, #fff, #ccc);
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 /*
 ======================
 Section And Grid
@@ -82,7 +84,7 @@ section {
   min-width: 465px;
   max-width: 520px;
   display: grid;
-  grid-template-rows: 160px repeat(6, 180px);
+  grid-template-rows: 160px repeat(6, 200px);
   grid-gap: 6px;
 }
 
@@ -188,6 +190,40 @@ Cell Templates
   border: 1px solid black;
 }
 
+button {
+  border-radius: 5px;
+  color: blue;
+  background-color: white;
+  padding: 6px 10px 6px 10px;
+  margin-left: 115px;
+  border: 1px solid blue;
+  font-family: 'Lato', sans-serif;
+  position: absolute;
+  bottom: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+    color: white;
+    transition: 0.5s;
+}
+
+button:focus {
+  outline: none;
+}
+
+.info {
+  position: relative;
+}
+
+.logo img {
+  border-radius: 50%;
+  margin-left: 10px;
+  width: 130px;
+  height: auto;
+}
+
 /*
 ======================
 Information
@@ -195,26 +231,55 @@ Information
 */
 
 h1 {
+  font-family: 'Lato', sans-serif;
   padding-top: .5em;
-  padding-left: 20px;
-  font-family: 'Marcellus SC', serif;
+  text-align: center;
   font-size: 24px;
   color: green;
   font-weight: 700;
 }
 
 h2 {
+  font-family: 'Lato', sans-serif;
   padding-top: 5px;
-  padding-left: 20px;
-  font-size: 18px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 h3 {
-  padding-top: 15px;
+  text-align: center;
+  margin-top: 15px;
   padding-left: 20px;
   padding-right: 15px;
   font-size: 15px;
   font-style: italic;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.center {
+  text-align: center;
+}
+
+.active {
+  visibility: visible;
+}
+
+.flash {
+  animation-name: flash;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+@keyframes flash {
+  from {color: red;}
+  to {color: green;}
 }
 
 /*
