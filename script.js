@@ -48,16 +48,38 @@ $(document).ready(function () {
     success: function(data) {
       console.log(data);
       if (data.stream === null) {
-        $('#shroud-live').addClass('hidden');
         $('#shroud-info').text("Offline");
+        $('#shroud-live').addClass('hidden');
       } else {
         $('#shroud-info').text(data.stream.channel.status);
         $('#shroud-live').addClass('active');
+        $('#shroud-views').text(data.stream.channel.views)
+        $('#shroud-followers').text(data.stream.channel.followers)
       }
     }
   })
 
-
+  $.ajax( {
+    url: "https://wind-bow.glitch.me/twitch-api/streams/timthetatman?callback=?",
+    type: 'GET',
+    dataType: 'jsonp',
+    headers: {
+      'Api-User-Agent': 'http://localhost:8080',
+      'Accept': 'application/vnd.twitchtv.v5+json'
+    },
+    success: function(data) {
+      console.log(data);
+      if (data.stream === null) {
+        $('#tim-info').text("Offline");
+        $('#tim-live').addClass('hidden');
+      } else {
+        $('#tim-info').text(data.stream.channel.status);
+        $('#tim-live').addClass('active');
+        $('#tim-views').text(data.stream.channel.views)
+        $('#tim-followers').text(data.stream.channel.followers)
+      }
+    }
+  })
 
 
 
