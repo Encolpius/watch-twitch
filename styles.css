@@ -1,271 +1,167 @@
-/*
-Imported Fonts
-*/
-
-@import url('https://fonts.googleapis.com/css?family=Marcellus+SC');
-
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/*
-======================
-Custom Styles
-======================
-*/
-
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-html {
-  width: 100%;
-  background: linear-gradient(to bottom, #fff, #ccc);
-}
+body {
+  background: #FC466B;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-@import url('https://fonts.googleapis.com/css?family=Lato');
+}
 
 /*
-======================
-Section And Grid
-======================
+==============================
+Grid
+==============================
 */
 
-section {
+.wrapper {
   margin: 0 auto;
-  margin-top: 3em;
-  width: 35%;
-  min-width: 465px;
-  max-width: 520px;
   display: grid;
-  grid-template-rows: 160px repeat(6, 200px);
-  grid-gap: 6px;
+  grid-gap: 15px;
+  width: 40%;
 }
 
-section > div {
-  background-color: white;
-  margin: 2px;
-  box-shadow: 4px 5px 5px #ccc;
+.wrapper > div {
   border: 1px solid black;
+  height: 200px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: 5px 5px 5px (0,0,0,0.8);
+  max-width: 500px;
+  min-width: 500px;
 }
 
-section > div:first-child {
-  text-align: center;
+.wrapper:first-child {
+  margin-top: 20px;
 }
 
-ul {
-  margin: 0 auto;
-  margin-top: 3em;
-  width: 30%;
-  display: flex;
-  justify-content: space-between;
-  padding: 8px;
-}
-
-li {
-  text-align: center;
-  display: inline-block;
-  font-size: 20px;
-  font-family: 'Marcellus SC', serif;
-  letter-spacing: 1.3px;
-  border-radius: 5px;
-  min-width: 119px;
-}
-
-a {
-  cursor: pointer;
-  color: blue;
-}
-
-a:active {
-  color: #6441a4;
+.wrapper:last-child {
+  margin-bottom: 20px;
 }
 
 /*
-======================
-Header and Image
-======================
+==============================
+Grid Items
+==============================
 */
 
-.header {
-  background-color: #6441A4;
-}
-
-.header img {
-  margin: 0 auto;
-  margin-top: 2px;
-  width: 300px;
-  height: auto;
-}
-
-/*
-======================
-Cell Templates
-======================
-*/
-
-.container {
-  display: grid;
-  grid-template-rows: auto 0px 30px;
-}
-
-.container > div:last-child {
-  border-top: 1px solid #ccc;
-}
-
-.twitch-json-image {
-  display: none;
-}
-
-.container img {
-  background-image: none;
-  background-repeat: no-repeat;
-  background-size: center;
-  opacity: 0.8;
-}
-
-/*---------------------------------*/
-
-.content {
-  display: grid;
-  grid-template-columns: 160px auto;
-}
-
-.logo {
+.channel-online {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  height: 10%;
 }
 
-.logo div {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  border: 1px solid black;
+.channel-main {
+  height: 75%;
+  border-bottom: 1px solid black;
+  display: flex;
+}
+
+.channel-bot {
+  height: 15%;
+}
+
+.channel-content {
+  margin-top: 25px;
+  margin-left: 8px;
+  width: 550px;
+}
+
+/*
+==============================
+Item Main
+==============================
+*/
+
+.logo {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  margin-left: 20px;
 }
 
 button {
-  border-radius: 5px;
-  color: blue;
   background-color: white;
-  padding: 6px 10px 6px 10px;
-  margin-left: 115px;
+  color: blue;
   border: 1px solid blue;
-  font-family: 'Lato', sans-serif;
-  position: absolute;
-  bottom: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-    background-color: blue;
-    color: white;
-    transition: 0.5s;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 5px 5px 8px 5px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.6)
 }
 
 button:focus {
   outline: none;
 }
 
-.info {
-  position: relative;
-}
-
-.logo img {
-  border-radius: 50%;
-  margin-left: 10px;
-  width: 130px;
-  height: auto;
+button:hover {
+  background-color: blue;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 /*
-======================
-Information
-======================
+==============================
+Item Footers
+==============================
+*/
+
+.channel-bot {
+  display: flex;
+  align-items: center;
+}
+
+.channel-bot img {
+  height: 26px;
+  width: 26px;
+  margin-left: 6px;
+}
+
+#heart {
+  margin-top: -2px;
+  margin-left: 25px;
+  height: 20px;
+  width: 20px;
+}
+
+/*
+==============================
+Typography
+==============================
 */
 
 h1 {
-  font-family: 'Lato', sans-serif;
-  padding-top: .5em;
-  text-align: center;
-  font-size: 24px;
-  color: green;
+  font-size: 18px;
+  color: #640dab;
   font-weight: 700;
 }
 
-h2 {
-  font-family: 'Lato', sans-serif;
-  padding-top: 5px;
-  text-align: center;
+h4 {
   font-size: 15px;
+  padding-left: 6px;
+  color: blue;
+}
+
+h5 {
+  margin-right: 5px;
   font-weight: 700;
 }
 
-h3 {
-  text-align: center;
-  margin-top: 15px;
-  padding-left: 20px;
-  padding-right: 15px;
-  font-size: 15px;
-  font-style: italic;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-.center {
-  text-align: center;
-}
-
-.active {
-  visibility: visible;
+p {
+  margin-top: 8px;
+  color: grey;
 }
 
 .flash {
@@ -280,26 +176,4 @@ h3 {
 @keyframes flash {
   from {color: red;}
   to {color: green;}
-}
-
-/*
-======================
-Footer
-======================
-*/
-
-footer {
-  margin: 0 auto;
-  width: 30%;
-  height: 60px;
-  background-color: #6441A4;
-  margin-top: 3em;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-footer h1 {
-  color: white;
 }

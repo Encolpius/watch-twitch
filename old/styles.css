@@ -1,0 +1,324 @@
+/*
+Imported Fonts
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Marcellus+SC');
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+======================
+Custom Styles
+======================
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  background: linear-gradient(to bottom, #fff, #ccc);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/*
+======================
+Section And Grid
+======================
+*/
+
+section {
+  margin: 0 auto;
+  margin-top: 3em;
+  width: 35%;
+  min-width: 480px;
+  max-width: 585px;
+  display: grid;
+  grid-template-rows: 160px repeat(5, 200px);
+  grid-gap: 6px;
+}
+
+section > div {
+  background-color: white;
+  margin: 2px;
+  box-shadow: 4px 5px 5px #ccc;
+  border: 1px solid black;
+}
+
+section > div:first-child {
+  text-align: center;
+}
+
+/*
+ul {
+  margin: 0 auto;
+  margin-top: 3em;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+li {
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Marcellus SC', serif;
+  letter-spacing: 1.3px;
+  border-radius: 5px;
+  min-width: 119px;
+}
+*/
+a {
+  cursor: pointer;
+  color: blue;
+}
+
+a:active {
+  color: #6441a4;
+}
+
+/*
+======================
+Header and Image
+======================
+*/
+
+.header {
+  background-color: #6441A4;
+}
+
+.header img {
+  margin: 0 auto;
+  margin-top: 2px;
+  width: 300px;
+  height: auto;
+}
+
+/*
+======================
+Cell Templates
+======================
+*/
+
+.container {
+  display: grid;
+  grid-template-rows: auto 30px;
+}
+
+.container > div:last-child {
+  border-top: 1px solid #ccc;
+}
+
+.twitch-json-image {
+  display: none;
+}
+
+.container img {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: center;
+  opacity: 0.8;
+}
+
+/*---------------------------------*/
+
+.content {
+  display: grid;
+  grid-template-columns: 160px auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo div {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+button {
+  border-radius: 5px;
+  color: blue;
+  background-color: white;
+  padding: 6px 10px 6px 10px;
+  border: 1px solid blue;
+  font-family: 'Lato', sans-serif;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+button:hover {
+    background-color: blue;
+    color: white;
+    transition: 0.5s;
+}
+
+button:focus {
+  outline: none;
+}
+
+.info {
+  text-align: center;
+  position: relative;
+}
+
+.logo img {
+  border-radius: 50%;
+  margin-left: 10px;
+  width: 130px;
+  height: auto;
+}
+
+.info {
+  max-height: 165px;
+}
+
+/*
+======================
+Information
+======================
+*/
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  padding-top: .5em;
+  text-align: center;
+  font-size: 24px;
+  color: green;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 15px;
+  padding-left: 20px;
+  padding-right: 15px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+h5 {
+  font-size: 13px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.center {
+  text-align: center;
+}
+
+.active {
+  visibility: visible;
+}
+
+.flash {
+  animation-name: flash;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+@keyframes flash {
+  from {color: red;}
+  to {color: green;}
+}
+
+/*
+======================
+Footer
+======================
+*/
+
+footer {
+  margin: 0 auto;
+  width: 30%;
+  height: 60px;
+  background-color: #6441A4;
+  margin-top: 3em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer h1 {
+  color: white;
+}
+
+.footer img {
+  width: 25px;
+  height: auto;
+  margin-top: 3px;
+  margin-left: 8px;
+}
+
+.footer li {
+  display: inline-block
+}
