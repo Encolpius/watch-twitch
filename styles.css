@@ -26,7 +26,7 @@ Grid
 
 .wrapper > div {
   border: 1px solid black;
-  height: 200px;
+  height: 160px;
   background-color: #f9f9f9;
   border-radius: 6px;
   box-shadow: 5px 5px 5px (0,0,0,0.8);
@@ -44,6 +44,41 @@ Grid
 
 /*
 ==============================
+Header
+==============================
+*/
+
+.header-img {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #640dab;
+}
+
+.header-img img {
+  width: 55%;
+}
+
+.header-nav {
+  height: 50px;
+}
+
+ul {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  width: 33%;
+}
+
+/*
+==============================
 Grid Items
 ==============================
 */
@@ -52,11 +87,12 @@ Grid Items
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 10%;
+  height: 15%;
+  border-bottom: 1px solid black;
 }
 
 .channel-main {
-  height: 75%;
+  height: 70%;
   border-bottom: 1px solid black;
   display: flex;
 }
@@ -86,7 +122,7 @@ Item Main
 }
 
 .logo img {
-  width: 120px;
+  width: 80px;
   height: auto;
   margin-left: 20px;
 }
