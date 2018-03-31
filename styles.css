@@ -8,7 +8,8 @@ body {
   background: #FC466B;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  display: flex;
+  justify-content: center;
 }
 
 /*
@@ -21,7 +22,6 @@ Grid
   margin: 0 auto;
   display: grid;
   grid-gap: 15px;
-  width: 40%;
 }
 
 .wrapper > div {
@@ -38,7 +38,7 @@ Grid
   margin-top: 20px;
 }
 
-.wrapper:last-child {
+#five {
   margin-bottom: 20px;
 }
 
@@ -88,12 +88,12 @@ Grid Items
   align-items: center;
   justify-content: flex-end;
   height: 15%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ccc;
 }
 
 .channel-main {
   height: 70%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ccc;
   display: flex;
 }
 
