@@ -17,6 +17,8 @@ body {
   flex-direction: column;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 /*
 ==============================
 Grid
@@ -73,10 +75,26 @@ ul {
   justify-content: space-between;
 }
 
-a {
+li {
+  font-family: 'Lato', sans-serif;
+}
+
+.nav-button {
   text-align: center;
   text-decoration: none;
   width: 33%;
+}
+
+.nav-button:hover {
+  font-weight: 700;
+}
+
+.title {
+  text-decoration: none;
+}
+
+.title:hover {
+  font-weight: 700;
 }
 
 /*
@@ -183,7 +201,6 @@ Typography
 h1 {
   font-size: 18px;
   color: #640dab;
-  font-weight: 700;
 }
 
 h4 {
@@ -225,4 +242,8 @@ Offline
 
 .offline {
   order: 2;
+}
+
+.offline .title {
+  font-weight: 400;
 }
