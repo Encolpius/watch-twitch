@@ -127,6 +127,10 @@ Grid Items
   width: 550px;
 }
 
+a {
+  display: inline-block;
+}
+
 /*
 ==============================
 Item Main
