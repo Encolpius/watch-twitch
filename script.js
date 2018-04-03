@@ -16,6 +16,7 @@ $(document).ready(function() {
     var containers = document.getElementsByClassName('.channel-online')
     var onOrOff = document.querySelectorAll('h5')
     var container = document.getElementsByClassName('container')
+    var logo = document.getElementsByClassName('twitch-logo')
     var i = descriptions.length;
 
     $.each(channels, function(i, l) {
@@ -36,7 +37,8 @@ $(document).ready(function() {
             $(descriptions[i]).text('Offline')
             $(container[i]).addClass('offline')
           } else {
-            $(container[i]).addClass('online')
+            $(logo[i]).attr("src", data.stream.channel.logo);
+            $(container[i]).addClass('online');
             $(descriptions[i]).text(data.stream.channel.status);
             $(follower[i]).text(data.stream.channel.followers);
             $(views[i]).text(data.stream.channel.views);
